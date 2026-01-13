@@ -3,6 +3,33 @@
  <img width="500" src="https://github.com/EdwinLiavaa/codehawks-security-portfolio/blob/main/logo.png">
 </p>
 
+## Audit Portfolio
+
+| # | Protocol | Date | Report | Findings |
+|---|----------|------|--------|----------|
+| 1 | PasswordStore | Nov 8, 2024 | [PDF](./2024-11-08-password-store-audit-report.pdf) | 2 High, 1 Info |
+| 2 | PuppyRaffle | Dec 2, 2024 | [PDF](./2024-12-02-puppy-raffle.report.pdf) | Multiple findings |
+| 3 | **Pasifika Token** | Jan 13, 2026 | [PDF](./2026-01-13-pasifika-token-audit-report.pdf) | 2 High, 3 Medium, 4 Low, 5 Info |
+
+### Latest: Pasifika Token (PASI) - Full Audit + Mitigation Review
+
+**Status:** ✅ All Critical Fixes Applied
+
+The Pasifika Token is an ERC-20 token designed for Pacific Islander remittances. This was a comprehensive security audit including:
+
+- **Initial Audit** - Identified 14 findings across High, Medium, Low, and Informational severity
+- **Mitigation Implementation** - Worked with protocol to fix all critical issues
+- **Mitigation Review** - Verified all fixes and updated report
+
+Key findings addressed:
+- **[H-01]** Treasury balance race condition - Fixed with execution-time balance check
+- **[H-02]** Missing reentrancy guard - Fixed with OpenZeppelin ReentrancyGuard
+- **[M-02]** Quorum manipulation via validator removal - Fixed by storing validator count at proposal creation
+- Custom errors implemented for gas optimization
+- Comprehensive test coverage expanded to 38 tests
+
+---
+
 ## My Journey into Smart Contract Security Research: First Steps with Cyfrin Updraft
 
 As I dive deeper into the world of blockchain security, I wanted to share my recent experience learning smart contract auditing through Cyfrin Updraft. The journey has been both challenging and rewarding, opening my eyes to the critical role security researchers play in the Web3 ecosystem.
